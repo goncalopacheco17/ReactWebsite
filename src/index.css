@@ -1,0 +1,28 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #06060d;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Customização da scrollbar da página */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #06060d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c2e;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c5dfa;
+}
