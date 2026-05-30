@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
-  const categories = ['Soccer', 'UFC', 'NBA', 'NFL', 'WWE'];
+  const categories = ['Soccer', 'UFC', 'NBA', 'NFL', 'WWE', 'F1'];
 
   const linkStyle = {
     color: '#8888a3',

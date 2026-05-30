@@ -1,17 +1,68 @@
-export default function Profile({ favoritesCount }) {
-  return (
-    <div style={{ color: '#fff', fontFamily: 'sans-serif', maxWidth: '500px', margin: '40px auto', padding: '20px', background: '#1a1a1a', borderRadius: '12px', border: '1px solid #333' }}>
-      <h2 style={{ borderBottom: '1px solid #333', paddingBottom: '10px', marginTop: 0 }}>My Profile</h2>
-      
-      <div style={{ margin: '20px 0' }}>
-        <p><strong>Nome:</strong> Colecionador Pro</p>
-        <p><strong>Email:</strong> admin@cardhub.com</p>
-        <p><strong>Membro desde:</strong> 2026</p>
-      </div>
+import { useState } from 'react';
 
-      <div style={{ background: '#222', padding: '15px', borderRadius: '8px', textAlign: 'center', border: '1px solid #ff4757' }}>
-        <h3 style={{ margin: 0, color: '#ff4757' }}>{favoritesCount}</h3>
-        <p style={{ margin: '5px 0 0 0', color: '#aaa', fontSize: '14px' }}>Cartas nos teus Favoritos</p>
+export default function Profile() {
+  // Dados de exemplo - Ajustados conforme pedido
+  const [user] = useState({
+    name: "João Silva",
+    email: "joao.silva@email.com",
+    memberSince: "Janeiro 2026",
+    favoriteCategory: "NBA",
+    nationality: "Portugal"
+  });
+
+  return (
+    <div style={{ padding: '60px 20px', maxWidth: '600px', margin: '0 auto', color: '#fff', fontFamily: 'system-ui, sans-serif' }}>
+      
+      {/* CARD PRINCIPAL DE PERFIL */}
+      <div style={{ 
+        background: '#0d0d14', 
+        border: '1px solid #1c1c2e', 
+        borderRadius: '24px', 
+        padding: '40px',
+        textAlign: 'center'
+      }}>
+        
+        {/* CÍRCULO DA FOTO */}
+        <div style={{ 
+          width: '120px', 
+          height: '120px', 
+          background: 'linear-gradient(135deg, #7c5dfa, #ff007f)', 
+          borderRadius: '50%', 
+          margin: '0 auto 20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '48px',
+          boxShadow: '0 0 20px rgba(124, 93, 250, 0.2)'
+        }}>
+          👤
+        </div>
+
+        <h1 style={{ margin: '0 0 8px 0', fontSize: '28px' }}>{user.name}</h1>
+        <p style={{ color: '#63637e', margin: '0 0 40px 0', fontSize: '14px' }}>{user.email}</p>
+
+        {/* DADOS DO UTILIZADOR */}
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column',
+          gap: '20px', 
+          borderTop: '1px solid #1c1c2e', 
+          paddingTop: '30px',
+          textAlign: 'left'
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ color: '#63637e' }}>Membro desde:</span>
+            <span style={{ fontWeight: '600' }}>{user.memberSince}</span>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ color: '#63637e' }}>Categoria favorita:</span>
+            <span style={{ fontWeight: '600', color: '#7c5dfa' }}>{user.favoriteCategory}</span>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ color: '#63637e' }}>Nacionalidade:</span>
+            <span style={{ fontWeight: '600' }}>{user.nationality}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

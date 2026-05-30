@@ -20,7 +20,7 @@ export default function TradingCards({ favorites, onToggleFavorite }) {
     ? cardsData
     : cardsData.filter(card => card.category === selectedCategory);
 
-  const categories = ['All', 'Soccer', 'UFC', 'NBA', 'NFL', 'WWE'];
+  const categories = ['All', 'Soccer', 'UFC', 'NBA', 'NFL', 'WWE','F1'];
 
   const getIcon = (cat) => {
     switch(cat) {
@@ -30,6 +30,7 @@ export default function TradingCards({ favorites, onToggleFavorite }) {
       case 'NBA': return '🏀';
       case 'NFL': return '🏈';
       case 'WWE': return '🤼';
+      case 'F1': return '🏎️';
       default: return '🎴';
     }
   };
