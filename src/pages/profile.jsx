@@ -51,15 +51,15 @@ export default function Profile() {
           textAlign: 'left'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <span style={{ color: '#63637e' }}>Membro desde:</span>
+            <span style={{ color: '#63637e' }}>Member Since:</span>
             <span style={{ fontWeight: '600' }}>{user.memberSince}</span>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <span style={{ color: '#63637e' }}>Categoria favorita:</span>
+            <span style={{ color: '#63637e' }}>Favorite Category:</span>
             <span style={{ fontWeight: '600', color: '#7c5dfa' }}>{user.favoriteCategory}</span>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <span style={{ color: '#63637e' }}>Nacionalidade:</span>
+            <span style={{ color: '#63637e' }}>Nationality:</span>
             <span style={{ fontWeight: '600' }}>{user.nationality}</span>
           </div>
         </div>
