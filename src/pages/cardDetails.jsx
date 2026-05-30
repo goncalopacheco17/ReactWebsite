@@ -17,9 +17,9 @@ export default function CardDetails({ favorites, onToggleFavorite }) {
   if (!card) {
     return (
       <div style={{ color: '#fff', textAlign: 'center', marginTop: '80px', fontFamily: 'system-ui, sans-serif' }}>
-        <h2>Carta não encontrada no catálogo!</h2>
+        <h2>Card not found in the catalog!</h2>
         <button onClick={() => navigate('/')} style={{ background: '#7c5dfa', color: '#fff', border: 'none', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', marginTop: '15px' }}>
-          Voltar à Home
+          Back to Home
         </button>
       </div>
     );

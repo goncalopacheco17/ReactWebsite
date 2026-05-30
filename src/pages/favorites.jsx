@@ -12,14 +12,14 @@ export default function Favorites({ favorites, onToggleFavorite }) {
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <h1 style={{ fontSize: '36px', fontWeight: '800', margin: '0 0 10px 0' }}>Favorites</h1>
         <p style={{ color: '#63637e', fontSize: '15px' }}>
-          Tens <strong>{totalCount}</strong> {totalCount === 1 ? 'carta' : 'cartas'} guardadas 
-          | Valor total: <strong style={{ color: '#7c5dfa' }}>€{totalValue.toFixed(2)}</strong>
+          You have <strong>{totalCount}</strong> {totalCount === 1 ? 'card' : 'cards'} saved 
+          | Total Value : <strong style={{ color: '#7c5dfa' }}>€{totalValue.toFixed(2)}</strong>
         </p>
       </div>
 
       {favorites.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '60px', border: '1px dashed #1c1c2e', borderRadius: '16px', color: '#63637e' }}>
-          Ainda não adicionaste nenhuma carta aos favoritos.
+          You haven't added any cards to your favorites yet.
         </div>
       ) : (
         <div style={{ 
