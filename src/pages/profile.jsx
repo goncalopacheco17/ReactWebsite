@@ -5,7 +5,7 @@ export default function Profile() {
   const [user] = useState({
     name: "João Silva",
     email: "joao.silva@email.com",
-    memberSince: "Janeiro 2026",
+    memberSince: "January 2026",
     favoriteCategory: "NBA",
     nationality: "Portugal"
   });
